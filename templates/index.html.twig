@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Moteur de Recherche</h1>
+    <div>
+        <h2>TODO Candidat</h2>
+        <ul>
+            <li>faire un search</li>
+            <li>faire des routes ajax</li>
+            <li>une page avec un input</li>
+            <li>une page de résultats</li>
+            <li>Faire un zip ou un repo</li>
+            <li>Max 2h</li>
+            <li>Pas besoin de pagination, pas besoin de filtre</li>
+        </ul>
+    </div>
+
+    <p>Available posts</p>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <details>
+                    <summary>{{ post.title }} ({{ post.author.name }})</summary>
+                    <p>{{ post.description }}</p>
+                </details>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

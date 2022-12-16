@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "target": "ES6",
+    "module": "CommonJS",
+    "resolveJsonModule": true,
+  },
+  "include": [
+    "assets"
+  ],
+  "exclude": ["node_modules"]
+}
