@@ -21,6 +21,8 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/js/main.ts')
+    .addEntry('search-bar-auto-complete', './assets/js/search/main.ts')
+    .addEntry('posts', './assets/js/posts/main.ts')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
