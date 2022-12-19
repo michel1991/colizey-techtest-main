@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('posts') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('posts') }}
+{% endblock %}
+
+
+{% block body %}
+    <main class="container"  data-url-to-posts="{{ path("app_posts") }}">
+    </main>
+{% endblock %}
