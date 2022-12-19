@@ -8,6 +8,11 @@
 ## Note
 Pour les routes AJAX j'ai utilisé une solution à la mano j'aurais pu utilisé friendsofsymfony/jsrouting-bundle 
 
+## Tests
+Entrer une valeur dans la barre de recherche puis cliquez sur le bouton recherche, j'ai pas
+trop compris l'affichage des resultats de posts sous la barre de recherche qui contraste
+avec le TODO de la page d'affichage des resultats.
+
 ## Demo
 
 Voilà une idée de maquette fonctionnelle :
