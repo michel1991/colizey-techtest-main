@@ -15,4 +15,13 @@ class PostRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Post::class);
     }
+
+    /**
+     * @return Post[]
+     */
+    public function searchAll(): array
+    {
+        return $this->findAll();
+    }
+
 }
