@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\AuthorRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: AuthorRepository::class)]
@@ -15,6 +16,7 @@ class Author
     private Uuid $id;
 
     #[ORM\Column(length: 255)]
+    #[Groups([GroupName::READ,  GroupName::FILTERABLE])]
     private string $name;
 
     #[ORM\Column]

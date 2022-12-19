@@ -6,6 +6,7 @@ use App\Repository\PostRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Uid\Uuid;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: PostRepository::class)]
 class Post
@@ -13,21 +14,26 @@ class Post
     #[ORM\Id]
     #[ORM\Column(type: 'uuid')]
     #[ORM\GeneratedValue('NONE')]
+    #[Groups([GroupName::READ, GroupName::FILTERABLE])]
     private Uuid $id;
 
     #[ORM\ManyToOne(targetEntity: Author::class)]
+    #[Groups([GroupName::READ,  GroupName::FILTERABLE])]
     private Author $author;
 
     #[ORM\Column(length: 255)]
+    #[Groups([GroupName::READ, GroupName::FILTERABLE])]
     private string $title;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Groups([GroupName::READ,  GroupName::FILTERABLE])]
     private string $description;
 
     #[ORM\Column]
     private \DateTimeImmutable $createdAt;
 
     #[ORM\Column(length: 255)]
+    #[Groups([GroupName::READ, GroupName::WRITE, GroupName::FILTERABLE])]
     private ?string $imageUrl = null;
 
     public function __construct(
