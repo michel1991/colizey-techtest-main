@@ -5,6 +5,9 @@
 * installer les dépendances js (`npm install`) et build les assets (`npm run dev`)
 * accéder au projet : https://localhost:4000
 
+## Note
+Pour les routes AJAX j'ai utilisé une solution à la mano j'aurais pu utilisé friendsofsymfony/jsrouting-bundle 
+
 ## Demo
 
 Voilà une idée de maquette fonctionnelle :
